@@ -4,7 +4,9 @@ export class TinaAdminApi {
   /**
    * cms.api.tina
    */
-  api: any
+  api: {
+    request: (query: string, { variables }: { variables: object }) => any
+  }
   constructor(TinaApi) {
     this.api = TinaApi
   }
@@ -12,7 +14,7 @@ export class TinaAdminApi {
   async fetchCollections() {
     const response: { getCollections: Collection[] } = await this.api.request(
       `query{ getCollections { label, name } }`,
-      {}
+      { variables: {} }
     )
 
     return response
@@ -73,7 +75,7 @@ export class TinaAdminApi {
   async fetchDocumentFields() {
     const response: GetDocumentFields = await this.api.request(
       `query { getDocumentFields }`,
-      {}
+      { variables: {} }
     )
 
     return response
