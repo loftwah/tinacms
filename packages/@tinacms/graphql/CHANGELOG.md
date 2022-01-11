@@ -1,5 +1,16 @@
 # tina-graphql
 
+## 0.60.0
+
+### Minor Changes
+
+- 35884152b: Adds and audit command that checks files for errors.
+
+### Patch Changes
+
+- b66aefde1: Fixed issue where one could not add a title and then a bold text
+- 4948beec6: Fix issues with mdx code blocks and inline code nodes
+
 ## 0.59.3
 
 ### Patch Changes
